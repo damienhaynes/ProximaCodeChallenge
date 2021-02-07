@@ -21,7 +21,7 @@ jobs:
     - name: Archive Release
       run: |
         touch release.tar.gz
-        tar -czvf release.tar.gz --exclude='./*.tar.gz' .
+        tar -czvf release.tar.gz --exclude='./*.tar.gz' --exclude='./.git*' .
     - name: Upload Release
       uses: AButler/upload-release-assets@v2.0
       with:
